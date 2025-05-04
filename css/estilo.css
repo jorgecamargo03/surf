@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+*{
+    font-family: "Caveat Brush", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+header{
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    background-color: #c4d9c9ce;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    height: 80px;
+    
+   
+}
+
+.texto{
+    margin-top: 10px;
+    font-weight: 90;
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+    
+    width: 70%;
+
+}
+.about h1{
+    
+    text-align: center;
+    font-weight: 2;
+    font-size: 2rem;
+    border-bottom: 1px solid #C4D9C9;
+    
+   
+    margin: 15px;
+}
+main{
+    width: 100vw;
+    margin-top: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.about{
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.imagem{
+    background-image: url(../img/Marvel-Reveals-Death-of-the-Silver-Surfer-Limited-Series-by-Greg-Pak-Sumit-Kumar.webp);
+    background-size: 200%;
+    background-position: top ;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease;
+    border-radius: 50%;
+     
+    height: 300px;
+    width: 300px;
+}
+.imagem:hover{ 
+    background-size: 300%; 
+}
+
+
+.flexA a:hover{
+    color: #fff;
+}
+a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    padding: 0px;
+    background-color: transparent; 
+    transition: color .5s;
+    text-decoration: none;
+    width: 100%;
+}
+
+
+.icons{
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.icons i{
+    color: #56745f;
+    transition: transform 1s;
+}
+.icons i:hover{
+   
+    color: #889c8d;
+    transform: scale(1.2,1.2);
+}
+.conteiner{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 40px;
+   
+}
+
+.slide{
+  
+    border-radius:10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    transition: transform 1s;
+
+    border: 1px solid rgb(147, 147, 147);
+    width: 50%;
+}
+.img-slide{
+    
+   align-self: center;
+   border: 1px solid #b1b1b1;
+   border-radius: 10px;
+   overflow: hidden;
+   height: 200px;
+   width: 100%; 
+}
+.img-slide img{
+    
+    height: 100%;
+    width: 100%;
+
+}
+.texto-slide h6{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.texto-slide p{
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    color: #6e6e6e;
+}
+.slide:hover{
+    position: static;
+    transform: scale(1.05);
+}
+
+.projects h1{
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.skill{
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 80px;
+
+}
+.skill h1{
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.flexA{
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+   
+  
+    width:100%;
+    
+}
+div.message{
+padding: 70px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+div.message h6{
+  font-size: 2.1rem;
+  font-weight: 200;
+}
+.message p{
+    color: #8a8a8a;
+}
+footer{
+    
+    text-align: center;
+    background-color: #888888;
+    padding: 20px;
+    color: #fff8ff;
+}
+
+@media screen and  (min-width:320px) and (max-width:992px){
+    .imagem{
+        height: 200px;
+        width: 200px;
+    }
+    .flexA a{
+        font-size: 15px;
+    }
+    .img-slide img{
+        object-fit: cover;
+        height: 200px;
+        width: 200px;
+    }
+    
+}
+
+
+
