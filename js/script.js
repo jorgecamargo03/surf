@@ -1,7 +1,4 @@
-document.getElementById('voltar-topo').addEventListener('click', function(e) {
-    e.preventDefault(); // impede o pulo seco do href="#"
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+
 
 document.getElementById('voltar-about').addEventListener('click', function(e) {
     e.preventDefault(); // impede o pulo seco do href="#"
