@@ -10,7 +10,7 @@ document.getElementById('voltar-about').addEventListener('click', function(e) {
 
 document.getElementById('voltar-project').addEventListener('click', function(e) {
     e.preventDefault(); // impede o pulo seco do href="#"
-    window.scrollTo({ top: 700, behavior: 'smooth' });
+    window.scrollTo({ top: 500, behavior: 'smooth' });
 });
 
 document.getElementById('voltar-message').addEventListener('click', function(e) {
