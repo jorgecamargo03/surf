@@ -122,11 +122,12 @@ a{
 .conteiner{
     display: flex;
     flex-direction: row;
-    width: 100vw;
-    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
     overflow-x: auto;
-    padding: 40px;
-   
+    padding: 5px;
+    margin: 5px; 
 }
 
 .slide{
@@ -137,25 +138,26 @@ a{
     flex-direction: column;
     background-color: #f9f9f9;
     transition: transform 1s;
-
     border: 1px solid rgb(147, 147, 147);
-    width: 50%;
+    min-width: 210px;
+    max-width: 220px;
+    flex: 0 0 auto;
 }
 .img-slide{
-    
-   align-self: center;
    border: 1px solid #b1b1b1;
-   border-radius: 10px;
-   overflow: hidden;
-   height: 200px;
-   width: 100%; 
-}
-.img-slide img{
-    
-    height: 100%;
     width: 100%;
-
+    height: 192px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-self: center;
 }
+.img-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
 .texto-slide h6{
     font-size: 1.5rem;
     text-align: center;
@@ -226,6 +228,9 @@ footer{
 }
 
 @media screen and  (min-width:1px) and (max-width:768px){
+    .conteiner{
+        padding: 5px;
+       }
     .imagem{
         height: 200px;
         width: 200px;
@@ -233,25 +238,23 @@ footer{
     .flexA a{
         font-size: 15px;
     }
-    .img-slide img{
-        object-fit: cover;
-        height: 200px;
-        width: 200px;
-    }
+   
     
 }
 @media screen and  (min-width:768px){
     .conteiner{
-        gap: 100px;
+      
+        gap: 80px;
     }
-    .slide{
-        width: 310px;
-    }
-    .slide img{
-        width: 310px;
-        object-fit: cover;
-
-    }
+    .slide {
+        min-width: 320px;
+        max-width: 340px;
+      }
+    
+      .img-slide {
+        height: 220px;
+      }
+    
    
     
 }
