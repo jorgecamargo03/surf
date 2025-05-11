@@ -25,16 +25,17 @@ header{
     z-index: 1000;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #c4d9c9ce;
     backdrop-filter: blur(10px);
     padding: 10px;
     
     height: 80px;
    
-    
-   
+}
+nav{
+    display: flex;
+    gap: 30px;
 }
 
 .texto{
@@ -92,7 +93,7 @@ main{
 }
 
 
-.flexA a:hover{
+nav a:hover{
     color: #fff;
 }
 a{
@@ -124,39 +125,32 @@ a{
     transform: scale(1.2,1.2);
 }
 .conteiner{
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
-    overflow-x: auto;
+   height: 400px;
     padding: 5px;
     margin: 5px; 
 }
 
 
-.slide{
-  
-    border-radius:10px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    transition: transform 1s;
-    border: 1px solid rgb(147, 147, 147);
-    min-width: 210px;
-    max-width: 220px;
-    flex: 0 0 auto;
-}
 .img-slide{
    border: 1px solid #b1b1b1;
     width: 100%;
-    height: 192px;
+    height: 100%;
     border-radius: 10px;
     overflow: hidden;
     align-self: center;
+    
+ 
+
+    
 }
 .img-slide img {
+  
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -168,14 +162,12 @@ a{
     text-align: center;
 }
 .texto-slide p{
+    font-size: 1.2rem;
     font-family: "Poiret One", sans-serif;
     font-weight: 900;
     color: #777777;
 }
-.slide:hover{
-    position: static;
-    transform: scale(1.05);
-}
+
 
 .projects h1{
     align-items: center;
@@ -200,15 +192,32 @@ a{
     font-size: 3rem;
 }
 
-.flexA{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top: 10px;
-    width:100%;
+.arrows{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-content: space-between;
+     width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
     
-    
+}
+.arrows button{
+    opacity: 0.5;
+ background-image: radial-gradient(circle, #266b499c, #236b48);
+ border: none;
+ color: #ffffff;
+ padding: 10px;
+ border-radius: 50%;
+ transition: transform .5s,background .5s;
+
+}
+.arrows button:hover{
+    background-color: #56745f;
+    transform: scale(0.9);
 }
 
 div.message{
@@ -232,41 +241,68 @@ footer{
     padding: 20px;
     color: #fff8ff;
 }
-
-@media screen and  (min-width:1px) and (max-width:768px){
-    .conteiner{
-        padding: 5px;
-       }
-    .imagem{
-        height: 200px;
-        width: 200px;
-    }
-    header a{
-        font-size: 22px;
-    }
-    .flexA a{
-        font-size: 18px;
-    }
-   
-    
+.slide.active {
+  opacity: 1;
+  transform: translateX(0); 
+  pointer-events: auto;
+  transition: transform 1s ease, opacity 0.5s ease;
 }
-@media screen and  (min-width:768px){
-    .conteiner{
-      
-        gap: 80px;
-    }
-    .slide {
-        min-width: 320px;
-        max-width: 340px;
-      }
-    
-      .img-slide {
-        height: 220px;
-      }
-    
-   
-    
+
+.slide {
+  position: absolute;
+  opacity: 0; 
+  transform: translateX(300px); 
+  pointer-events: none; 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border: 1px solid rgb(147, 147, 147);
+width: 350px;
+  
+  height:350px;
+  flex: 0 0 auto;
+  
+}
+
+.slide:hover {
+  transform: scale(1.05); 
 }
 
 
 
+
+
+
+
+
+
+
+
+@media  screen and (max-width:440px) {
+    nav a{
+        font-size: 1rem;
+
+    }nav{
+        gap: 7px
+    };
+}
+@media screen and (min-width:768px){
+    .conteiner{
+        overflow-x: auto;
+        
+    }
+   
+    .slide{
+         transform: translateY(0px);
+        position: relative;
+        opacity: 1;
+    }.arrows{
+        display: none;
+    }
+    
+}

@@ -1,3 +1,89 @@
+const next = document.getElementById('next');
+const prev = document.getElementById('prev');
+const slides = document.querySelectorAll('.slide');
+let active = 0;
+let total = slides.length;
+
+next.addEventListener('click', () => {
+  update(1);
+});
+
+prev.addEventListener('click', () => {
+  update(-1);
+});
+
+function update(direction) {
+  slides[active].classList.remove('active'); // Remove a classe 'active' do slide atual
+
+  if (direction < 0) {
+  
+    slides[active].classList.add('prev');
+    active = (active - 1 + total) % total;
+    slides[active].classList.add('active'); 
+    setTimeout(() => slides[active].classList.remove('prev'), 1000); 
+  } else {
+    // Para a direção positiva (next)
+    slides[active].classList.add('next');
+    active = (active + 1) % total;
+    slides[active].classList.add('active'); 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 document.getElementById('voltar-about').addEventListener('click', function(e) {
